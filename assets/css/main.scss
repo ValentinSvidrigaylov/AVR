@@ -1,0 +1,62 @@
+@import 'variables.scss';
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;900');
+}
+
+html {
+	--background-color: white;
+    --outer-background-color: linear-gradient(to bottom, #caa6f3 0%, #a43afa 100%) no-repeat;
+	--color: black;
+    --a-color: black;
+}
+
+html[data-theme='dark']  {
+	--background-color: #2e2e2e !important;
+    --outer-background-color: linear-gradient(to bottom, #556e80 0%, #374d5e 100%) no-repeat;
+	--color: white !important;
+    --a-color: white;
+}
+
+a {
+    color: var(--a-color);
+}
+
+a:hover {
+    filter: invert(1);
+    text-decoration: underline !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: var(--outer-background-color);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+@each $percent in $percents {
+    .split-#{$percent}-#{100-$percent} {
+        display: grid;
+        grid-template-columns: #{$percent}fr #{100-$percent}fr;
+    }
+}
+
+main {
+    padding: 0.5rem;
+    width: 80vmax;
+    //min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--background-color);
+    box-sizing: border-box;
+}
+
+nav, header, footer {
+    background: var(--background-color);
+    margin: 0px !important;  
+}
