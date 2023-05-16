@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "test:e2e": "nightwatch",
     "predeploy": "nuxt generate",
-    "deploy": "gh-pages -d dist"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
@@ -34,6 +34,7 @@
     "chromedriver": "^106.0.1",
     "gh-pages": "^5.0.0",
     "nightwatch": "^2.3.9",
+    "push-dir": "^0.4.1",
     "sass": "^1.62.0",
     "sass-loader": "^10.4.1"
   }

@@ -21,5 +21,5 @@
         </button>
 	</div>
 </template>
-<script src="./js/ThemeButton.client.js"></script>
-<style src="./css/ThemeButton.css"></style>
+<script src="./ThemeButton.client.js"></script>
+<style src="./ThemeButton.css"></style>

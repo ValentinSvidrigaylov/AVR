@@ -1,8 +1,10 @@
+const base = 'gh-pages' === process.env.NODE_ENV ? '/nuxt_test/' : '/';
+
 export default {
-   mode: 'static',
+   target: 'static',
    router: {
-      base: '/nuxt_test/'
-   },
+		base,
+	},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt',
@@ -20,12 +22,16 @@ export default {
     ]
   },
   script: [
-   {src: '/bootstrap.bundle.min.js',}
+   {src: '/bootstrap.bundle.min.js',},
+   {src: '/components/ToTopButton/ToTopButton.client.js',},
+   {src: '/components/ThemeButton/ThemeButton.client.js',},
+   
   ],
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
 	'@/assets/css/main.scss',
-	 
+	'@/components/ThemeButton/ThemeButton.css',
+	'@/components/ToTopButton/ToTopButton.css'
   ],
   styleResources: {
 	scss: ['~/assets/css/variables.scss']
@@ -52,5 +58,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+	  publicPath: '/static/',
   }
 }

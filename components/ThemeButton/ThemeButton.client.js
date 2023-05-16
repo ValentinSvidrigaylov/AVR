@@ -1,8 +1,7 @@
 if (process.browser) {
-  const storageKey = 'theme-preference'
-
+  const storageKey = 'theme-preference';
   const onClick = () => {
-    // flip current value
+    
     theme.value = theme.value === 'light'
       ? 'dark'
       : 'light'
@@ -36,25 +35,19 @@ if (process.browser) {
   const theme = {
     value: getColorPreference(),
   }
-
-  // set early so no page flashes / CSS is made aware
+  
   reflectPreference()
 
-  window.onload = () => {
-    // set on load so screen readers can see latest value on the button
-    reflectPreference()
+  document
+    .querySelector('#theme-toggle')
+    .addEventListener('click', onClick)
+  
 
-    // now this script can find and listen for clicks on the control
-    document
-      .querySelector('#theme-toggle')
-      .addEventListener('click', onClick)
-  }
 
-  // sync with system changes
   window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', ({matches:isDark}) => {
-      theme.value = isDark ? 'dark' : 'light'
-      setPreference()
-    })
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', ({matches:isDark}) => {
+    theme.value = isDark ? 'dark' : 'light'
+    setPreference()
+  })
 }

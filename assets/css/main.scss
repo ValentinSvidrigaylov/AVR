@@ -6,6 +6,8 @@
 }
 
 html {
+    scroll-behavior: smooth;
+
 	--background-color: white;
     --outer-background-color: linear-gradient(to bottom, #caa6f3 0%, #a43afa 100%) no-repeat;
 	--color: black;
@@ -21,6 +23,7 @@ html[data-theme='dark']  {
 
 a {
     color: var(--a-color);
+    text-decoration: underline !important;
 }
 
 a:hover {
@@ -48,7 +51,7 @@ body {
 
 main {
     padding: 0.5rem;
-    width: 80vmax;
+    width: 80vw;
     //min-height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -56,7 +59,40 @@ main {
     box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+    main {
+        width: 100vw;
+    }
+}
+
 nav, header, footer {
     background: var(--background-color);
     margin: 0px !important;  
+}
+
+nav a {
+    text-decoration: none !important;
+}
+
+img {
+    display: block;
+}
+
+figure {
+    margin: 0;
+}
+
+figure figcaption {
+    text-align: center;
+    font-style: italic;
+    padding: 1em;
+}
+
+figure figcaption * {
+    margin: 0 !important;
+}
+
+hr {
+    margin: 0;
+    border-color: var(--color);
 }
