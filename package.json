@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "test:e2e": "nightwatch",
     "predeploy": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+	"deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.1",

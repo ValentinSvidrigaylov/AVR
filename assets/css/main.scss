@@ -96,3 +96,7 @@ hr {
     margin: 0;
     border-color: var(--color);
 }
+
+.nuxt-link-exact-active {
+    text-decoration: underline !important;
+}
