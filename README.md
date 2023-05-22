@@ -1,14 +1,13 @@
 # Микроконтроллеры
 
-*Проект написан на nuxt (https://nuxtjs.org/).*
+*Проект написан на [nuxt](https://nuxtjs.org/).*
 
 ## Запуск проекта локально:
-**перед запуском нужно установить (npm)[https://nodejs.org/en/download]*
+**перед запуском нужно установить [npm](https://nodejs.org/en/download)*
 1. Открыть терминал в корневой директории ветки (предварительно скачав архив и распаковав его где-нибудь).
 2. Прописать команду "npm install" (без кавычек).
-3. Прописать команду "npm install serve" (без кавычек).
-4. Прописать команду "serve ./dist" (без кавычек).
+3. Прописать одну из команд: "serve ./dist"/"npm start"/"npm run dev" (в этом режиме анимация смены тем работает правильно) (без кавычек).
 
 Скомпилированный сайт находится в папке /dist, компоненты находятся в папке /components, страницы находятся в папке /pages, основной шаблон находится в папке /layouts.
 
-(Проект на github pages)[https://valentinsvidrigaylov.github.io/nuxt_test/]
+[Проект на github pages](https://valentinsvidrigaylov.github.io/nuxt_test/)
