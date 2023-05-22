@@ -2,7 +2,7 @@
 <article>
     <h2 class="text-center">Применение</h2>
     <div class="p-3">
-        <div class="split-75-25">
+        <div class="split-75-25 mobile-no-split">
             <div>
                 <p>Цель применения микроконтроллеров – сокращение числа компонентов, уменьшение размеров и снижение стоимости приборов (систем).</p>
                 <p>Микроконтроллеры предназначены для решения задач управления, контроля, регулирования и первичной обработки информации и менее эффективны при реализации сложных алгоритмов обработки данных.</p>
@@ -18,7 +18,7 @@
                         <ul><li><p>Например, K-Line адаптер для диагностики инжекторных двигателей.</p></li></ul>
                 </ol>
             </div>
-            <div class="p-4">
+            <div class="p-4 mobile-first">
                 <figure class="mx-auto">
                     <img src="img/DE41-00342A.jpg" alt="Панель управления микроволновкой SAMSUNG DE41-00342A" title="DE41-00342A" class="mx-auto" width="100%"/>
                     <figcaption>
@@ -36,6 +36,15 @@
     </div>
 </article>
 </template>
+<script>
+export default {
+  head() {
+    return {
+		title: 'Применение'
+    };
+  },
+};
+</script>
 
 import Vue from 'vue'
 

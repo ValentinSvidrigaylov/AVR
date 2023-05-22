@@ -4,9 +4,9 @@
       <button @click="HideButtons()">Скрыть/Показать</button>
     </div>
     <div class="fixed_nav" ref="fixed_nav">
-      <NuxtLink :to="{path: url_back}" class="nav-link" title="Назад">Назад</NuxtLink>
+      <NuxtLink :to="{path: url_back}" class="nav-link" title="Назад" v-if="showBack">Назад</NuxtLink>
       <NuxtLink :to="{path: url_home}" class="nav-link" title="На главную">На главную</NuxtLink>
-      <NuxtLink :to="{path: url_forth}" class="nav-link" title="Вперёд">Вперёд</NuxtLink>
+      <NuxtLink :to="{path: url_forth}" class="nav-link" title="Вперёд" v-if="showForth">Вперёд</NuxtLink>
     </div>
   </div>
 </template>
@@ -51,11 +51,11 @@ export default {
         }
     },
     beforeMount() {
-        this.CheckIndexes();
         this.currentRoute = location.pathname.match(/[\w/]*\/(\w*)/i)[1];
         this.currentRouteRaw = location.pathname;
         this.url_back = this.urls[this.urls.indexOf(location.pathname)-1 > -1 ? this.urls.indexOf(location.pathname)-1 : this.urls.length-1];
         this.url_forth = this.urls[this.urls.indexOf(location.pathname)+1 < this.urls.length ? this.urls.indexOf(location.pathname)+1 : 0];        
+        this.CheckIndexes();
     },
     
     watch: {

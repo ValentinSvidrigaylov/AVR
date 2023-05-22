@@ -1,13 +1,11 @@
-const base = 'gh-pages' === process.env.NODE_ENV ? '/nuxt_test/' : '/';
-
 export default {
    target: 'static',
    router: {
-		base,
+		base: '/'
 	},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt',
+    title: 'Микроконтроллеры',
     htmlAttrs: {
       lang: 'ru'
     },
@@ -58,6 +56,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-	  publicPath: '/static/',
-  }
+	publicPath: 'static'
+  },
+  generate: { fallback: true }
 }

@@ -2,7 +2,7 @@
 <article>
     <h2 class="text-center">Устройство микроконтроллеров</h2>
     <div class="p-3">
-        <div class="split-70-30">
+        <div class="split-70-30 mobile-no-split">
             <div>
                 <p>Типовая структура микроконтроллера включает в себя три базовых типа устройств:</p>
                 <ol>
@@ -12,7 +12,7 @@
                 </ol>
                 <p>Эти узлы соединены между собой общей системной шиной (магистралью), по которой производится весь обмен информацией в микропроцессорной системе.</p>
             </div>
-            <figure class="mx-auto">
+            <figure class="mx-auto mobile-first">
                 <img src="img/avr_scheme.png" alt="Схема микроконтроллера" title="Схема микроконтроллера" class="mx-auto" width="100%"/>
                 <figcaption>
                     <p>Схема типичного микроконтроллера</p>
@@ -29,3 +29,12 @@
     </div>
 </article>
 </template>
+<script>
+export default {
+  head() {
+    return {
+		title: 'Структура'
+    };
+  },
+};
+</script>

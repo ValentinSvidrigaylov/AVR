@@ -9,7 +9,6 @@
       </figcaption>
       <img src=""/>
     </figure>
-    </div>
     <p>В 1976 году американская фирма Intel выпускает микроконтроллер i8048.</p>
     <figure class="w-50 mx-auto">
       <img src="img/i8048.jpg" alt="i8048" title="i8048" class="mx-auto" width="100%"/>
@@ -43,6 +42,15 @@
   </div>
 </article>
 </template>
+<script>
+export default {
+  head() {
+    return {
+		title: 'История'
+    };
+  },
+};
+</script>
 
 import Vue from 'vue'
 

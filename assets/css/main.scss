@@ -49,6 +49,17 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .mobile-no-split {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .mobile-no-split .mobile-first {
+        order: -2147483647;
+    }
+}
+
 main {
     padding: 0.5rem;
     width: 80vw;

@@ -12,8 +12,8 @@
         </nav>
         <ThemeButton/>
       </div>  
+      <hr/>
     </header>
-    <hr/>
     <main>
       <Nuxt/>
       <ToTopButton/>
