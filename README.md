@@ -11,4 +11,4 @@
 
 Скомпилированный сайт находится в папке /dist, компоненты находятся в папке /components, страницы находятся в папке /pages, основной шаблон находится в папке /layouts.
 
-[Проект на github pages](https://valentinsvidrigaylov.github.io/nuxt_test/)
+[Проект на github pages](https://valentinsvidrigaylov.github.io/AVR/)
